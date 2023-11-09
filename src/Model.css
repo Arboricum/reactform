@@ -1,0 +1,158 @@
+main {
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 305px auto;
+    border-radius: 10px;
+}
+
+.mainSideBar {
+    grid-column: 1;
+    display: flex;
+}
+nav {
+    background-image: url("images/bg-sidebar-desktop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 305px;
+    display: flex;
+    flex-direction: column;
+}
+.stepNumber {
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stepNumber {
+    grid-column: 1;
+    grid-row: 1/3;
+    color: white;
+    font-weight: bold;
+}
+.stepNumberSelected {
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+}
+.stepThin {
+    grid-column: 2;
+    grid-row: 1;
+    color: lightgrey;
+}
+.stepThick {
+    grid-column: 2;
+    grid-row: 2;
+    font-weight: bold;
+    color: white;
+}
+.stepThick, .stepThin {
+    margin-left: 20px;
+}
+section {
+    margin-left: 120px;
+    grid-column: 2;
+}
+.btnDiv {
+    display: flex;
+    justify-content: right;
+    width: 438px;
+}
+.forwardButton {
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 5px;
+    height: 35px;
+}
+.forwardButton:hover {
+    background-color: hsl(228, 100%, 84%);
+}
+.backButton {
+    color: gray;
+    height: 35px;
+    margin-right: auto;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+.backButton:hover {
+    color: hsl(213, 96%, 18%);
+}
+.mainField {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    height: 457px;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 1000px) {    
+    body, html {
+        overflow: hidden;
+    }
+    main {
+        width: 100%;
+        height: 97%;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 85% 1fr;
+        grid-template-rows: 172px auto;
+        border-radius: 10px;
+        background-color: hsl(229, 24%, 95%);
+    }
+    
+    /* .mainSideBar {
+        grid-column: 1/4;
+        grid-row: 1/2;
+        display: flex;
+    } */
+    nav {
+        grid-column: 1/4;
+        grid-row: 1/2;
+        background-image: url("./images/bg-sidebar-mobile.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -25px;
+    } 
+    .mainField {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        background-color: white;
+        width: 90%;
+        align-items: center;
+    }  
+    /* section in peronalInfo.css*/
+    /* .personalLabel {
+        width: 100%;
+    } 
+    #personalForm>input {
+        width: 100%;
+    } */
+    .sidebarUl {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 700px) {
+    .stepThin, .stepThick {
+        display: none;
+    }
+    .sidebarLi {
+        display: grid;
+        grid-template-columns: 40px 20px;
+        grid-template-rows: 40px;
+        margin-bottom: 30px;
+    }
+    /* .btnDiv {
+        width: 90%;
+    } */
+}

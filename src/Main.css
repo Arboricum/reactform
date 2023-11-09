@@ -1,0 +1,20 @@
+main {
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 305px auto;
+    border-radius: 10px;
+}
+
+MainSidebar {
+    grid-column: 1;
+    display: block;
+}
+PersonalInfo {
+    grid-column: 2;
+}
+
+@media screen and (max-width: 600px) {
+    
+}

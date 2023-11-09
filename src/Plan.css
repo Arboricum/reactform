@@ -1,0 +1,160 @@
+p {
+    margin-top: -10px;
+    margin-bottom: 40px;
+    color: grey;
+}
+
+/* .mainField {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    height: 457px;
+} */
+.planChoice {
+    display: flex;
+    flex-direction: column;
+}
+.planChoiceButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    width: 438px;    
+}
+.planChoiceButtons > button {
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    width: 130px;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+.planChoiceButtons > button:hover {
+    border: 1px solid hsl(243, 100%, 62%) !important;   
+}
+.planChoiceButtons > button > h2 {
+    color: hsl(213, 96%, 18%);
+    margin-top: 40px;
+}
+.planChoiceButtons > button > p {
+    color: gray;
+    margin-top: -10px;
+    text-align: left;
+}
+small {
+    color: hsl(213, 96%, 18%);
+}
+.planSelected {
+    border: 1px solid hsl(243, 100%, 62%) !important;
+    background-color: hsl(231deg 100% 98.28%) !important;
+}
+.planRecurrency {
+    display: flex;
+    justify-content: center;
+    width: 438px;
+    background-color: hsl(231deg 100% 98.28%);
+    border-radius: 8px;
+    font-weight: bold;
+    color: gray;
+}
+.planRecurrency>label:nth-of-type(1) {
+    margin-right: 20px;
+}
+.planRecurrency>label:nth-of-type(2) {
+    margin-left: 20px;
+}
+.recurrencyContainer {
+    width: 30px;
+    height: 16px;
+    background-color: black;
+    border-radius: 29%;    
+}
+.recurrencySelector {
+    display: inline-block;
+    background-color: black;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+.recurrencySelected {
+    color: hsl(213, 96%, 18%);
+}
+.recurrencySelector:nth-of-type(1) {    
+    left: -2px;    
+}
+.recurrencySelector:nth-of-type(2) {
+    right: -16px;
+    top: -19px;
+}
+.recurrencyMonthly {
+    display: inline-block;
+    left: -15px;
+    top: -21px;
+    position: relative;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.recurrencyYearly {
+    display: inline-block;
+    top: -21px;
+    right: -1px;
+    position: relative;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.planChoiceButtons > button > img{
+    grid-column: 1;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    }
+@media screen and (max-width: 700px) {
+    .planChoice {
+        width: 90%;
+    }
+    .planChoiceButtons {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .planChoiceButtons > button {
+        display: grid;
+        height: 80px;
+        width: 100%;
+        grid-template-columns: 1fr 3fr;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid gray;
+        margin-bottom: 10px;
+    }
+    
+    .planChoiceButtons > button > img{
+    grid-column: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+    
+    .planChoiceButtons > button > h2 {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+}
+.planChoiceButtons > button > p {
+    color: gray;
+    grid-row: 1;
+    grid-column: 2;
+    text-align: left;
+    margin-top: 35px;
+}
+   
+}
